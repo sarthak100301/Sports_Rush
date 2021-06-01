@@ -1,4 +1,4 @@
-# Sports Rush
+# SPORTS RUSH
 
 ## INTRO
 The aim of our project is to build a Sports Network Community Website, which will broadly cover the following:
