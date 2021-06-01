@@ -1,0 +1,581 @@
+* {
+  /*To avoid horizontal scroll*/
+  max-width: 100%;
+}
+html,
+body {
+  /* remove padding and margin on body and give it total height*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 98%;
+  background-color: #e7ffff;
+}
+#main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+#loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #e7ffff;
+  background-size: cover;
+
+  z-index: 10000;
+}
+
+#loader .loaderTrk {
+  background-color: #006f94;
+  height: 4px;
+  animation-name: track;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes track {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+#loader img {
+  width: 10em;
+
+  margin-top: 20em;
+  animation: move 4s infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes move {
+  0% {
+    transform: scale(1);
+    margin-left: 0%;
+  }
+
+  100% {
+    transform: scale(1);
+    margin-left: 100%;
+  }
+}
+
+section {
+  /*All sections this can be overidden for each section*/
+
+  animation-name: appear;
+  height: 100%;
+  animation-duration: 4s;
+  background-color: white;
+}
+
+section {
+  margin-left: 4.5em;
+}
+
+section#intro {
+  max-height: 100%;
+  padding-top: 5em;
+  padding-left: 5em;
+  /*width: 100%;*/
+  /*margin-left: 4.5em;*/
+  animation: bg-change;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-direction: normal;
+  margin-top: 0;
+  background-color: white;
+  margin-bottom: 10em;
+}
+#intro h1 {
+  text-align: center;
+  /*font-family: 'Gravitas One', cursive;*/
+  font-size: 20em;
+  font-size: 15vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+#intro h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+  font-size: 10vw;
+  text-align: center;
+}
+#intro p {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 3vw;
+  font-size: 1.5em;
+}
+
+.headerimg {
+  width: 30vw;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@-webkit-keyframes imgRotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  25% {
+    transform: rotateY(90deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  75% {
+    transform: rotateY(270deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes bg-change {
+  0% {
+    color: #0095ca;
+  }
+
+  /*25%{
+  background-color:#004960;
+
+  }*/
+
+  50% {
+    color: #000000;
+  }
+
+  100% {
+    color: #004960;
+  }
+}
+/*=====EVENTS & WEATHER=====*/
+section#events {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: auto;
+  min-height: 80%;
+  margin-top: 5px;
+  padding-bottom: 15px;
+}
+
+section#events div.container-fluid {
+  /*height:100%;*/
+  padding: 0;
+  height: 100%;
+  margin-left: 5em;
+}
+section#events .row {
+  padding: 0;
+
+  max-width: 100%;
+  margin-left: 0em;
+}
+section#events div.container-fluid div.bg-1 {
+  height: 100%;
+}
+section#events div.container-fluid div.bg-1 .content {
+  height: 100%;
+}
+
+/*--carousel----*/
+section#events div.container-fluid div.bg-1 .content #myCarousel {
+  height: 100%;
+  margin-top: -20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+section#events
+  div.container-fluid
+  div.bg-1
+  .content
+  #myCarousel
+  div.carousel-inner {
+  height: 100%;
+}
+section#events div.container-fluid div.bg-1 .content #myCarousel img {
+  min-width: 100%;
+}
+.carousel-inner img {
+  /*      width: 100%; */
+  /*      margin: auto;*/
+}
+.carousel-caption {
+  /*	height: 40%;*/
+  background-color: rgba(0, 149, 202, 0.8);
+  /*	margin-left: 40%;*/
+  /*	width: 35%;*/
+}
+.carousel-caption h3 {
+  color: #fff !important;
+}
+div.weather-banner {
+  height: 100px;
+  color: #004960;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+}
+#weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.content#weather {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+}
+
+#weather img {
+  height: 100px;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+.highlights {
+  color: #004960;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-bottom: 2.5em;
+}
+/*--End carousel----*/
+
+/*---weather----*/
+
+/*---End weather----*/
+
+/*=====END EVENTS & WEATHER=====*/
+
+section#mapinfo {
+  margin-top: 10em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: 100%;
+}
+
+section#mapinfo .row {
+  height: 100%;
+  padding: 0;
+  max-width: 90%;
+  margin-left: 5em;
+}
+section#mapinfo .row .cols {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+section#mapinfo .row .cols#info {
+  height: 50%;
+  max-height: 60%;
+}
+section#mapinfo .row .cols .mapinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #004960;
+  /*background-color:#C2FFFF;*/
+  /*border:1px solid #004960;*/
+  cursor: pointer;
+}
+#routeresult {
+  max-height: 80%;
+  display: none;
+  text-align: center;
+  overflow-x: scroll;
+  /*border-right: 1px solid black;
+  border-left: 1px solid black;*/
+  padding: 5%;
+}
+div#routeresult div.row {
+  padding: 0;
+  margin: 0;
+}
+div#facilityresult div.row {
+  padding: 0;
+  margin: 0;
+}
+#facilityresult {
+  max-height: 90%;
+  display: none;
+  text-align: center;
+  overflow-x: scroll;
+  /*border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;*/
+  padding: 5%;
+}
+section#mapinfo .row #map {
+  height: 70%;
+  width: 70%;
+  margin-left: 10em;
+}
+div #info .cols {
+  padding-top: 60px;
+}
+
+section#mapinfo div#mapresult {
+  margin: 0;
+  padding: 0;
+}
+section#mapinfo .row .cols #mapresult .row {
+  margin: 0;
+  padding: 0px;
+}
+
+section#mapinfo .row .cols .mapinfo#routes,
+section#mapinfo .row .cols .mapinfo#facilities p {
+  font-size: 24px;
+  text-align: center;
+}
+
+section#mapinfo .row .cols #mapresult .name {
+  padding-left: 0;
+  /*border-right: 1px solid black;
+  border-left: 1px solid black;*/
+  overflow: hidden;
+}
+section#mapinfo .row .cols #routeresult .name {
+  padding-left: 10px;
+}
+section#mapinfo .row .cols #routeresult .row {
+  overflow: hidden;
+  height: auto;
+}
+section#mapinfo .attr p {
+  color: #006f94;
+  font-weight: bold;
+  font-size: 16px;
+}
+section#mapinfo .name p {
+  padding: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+section #info {
+  padding-top: 25%;
+}
+
+@media only screen and (max-width: 993px) {
+  section#mapinfo {
+    height: 120%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  section#mapinfo .row .cols {
+    height: 50%;
+  }
+  section#mapinfo .row #map {
+    margin-left: 15px;
+  }
+  section.row {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: ;
+  }
+  section#intro {
+    margin-bottom: 10%;
+  }
+  section#diva {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  #map {
+    padding-bottom: 0;
+  }
+}
+/* end map section*/
+
+footer {
+  height: 50%;
+}
+#diva {
+  background-color: #004960;
+  height: 120%;
+  /*margin-top: 10em;*/
+  width: 100%;
+}
+#diva h1 {
+  font-family: "Quicksand", cursive;
+  text-align: center;
+  font-size: 4em;
+  color: white;
+}
+
+#diva h2 {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+
+#diva form {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+}
+
+#diva .socialIcons img {
+  text-align: center;
+  padding-right: 3em;
+}
+
+#diva .socialIcons {
+  text-align: center;
+  padding-top: 1em;
+}
+
+#diva form button {
+  width: 8em;
+}
+#diva form input {
+  width: 30em;
+  border-radius: 5px;
+  height: 2.5em;
+}
+
+/*media query for footer*/
+@media only screen and (max-width: 993px) {
+  footer {
+    /*padding-top:5em;*/
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  #diva h1 {
+    font-size: 20px;
+  }
+
+  #diva h2 {
+    font-size: 15px;
+  }
+
+  #diva .socialIcons img {
+    padding-right: 0em;
+    width: 2em;
+    margin-top: 0px;
+  }
+  #diva .socialIcons {
+    margin-left: 5%;
+    align-content: center;
+    margin-top: 0em;
+  }
+
+  #diva form {
+    padding: 5%;
+  }
+
+  #diva form input {
+    height: 2em;
+  }
+
+  #diva form button {
+    height: 2em;
+  }
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #004960; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  height: 100%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 50px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#navimage img {
+  height: 7em;
+  width: 5em;
+  padding: 2em 0em 0em 0em;
+  position: fixed;
+  z-index: 0.5;
+  display: none;
+  animation-name: imgRotate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  cursor: pointer;
+}
+
+nav {
+  margin-top: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .headerimg div {
+    display: none;
+  }
+}
+
+/*this for the arrow pointing down*/
+div.downarrow {
+  transform: rotateX(200deg);
+  margin-left: 15em;
+  margin-top: 7em;
+  width: 9em;
+  animation-iteration-count: infinite;
+}

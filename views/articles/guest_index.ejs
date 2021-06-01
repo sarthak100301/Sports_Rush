@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="running-man-1399282_960_720.png" rel="icon">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>RUSH HOUR</title>
+</head>
+
+<body style="background-color: lightcyan;">
+    <div class="banner-main" style="width: 100%;
+    width: 100%;
+    background-image:linear-gradient(to right,#C6FFDD,#FBD786);
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 170px;
+    background-size: cover;">
+        <div class="container" style="width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;">
+            <div style="width: 100%;
+                        float: left;
+                        margin: 0 auto;
+                        text-align: center;">
+                <h1 class="bnner_title">Welcome To<br>
+                    <span style="color: #10b5fa">RUSH HOUR</span></h1>
+                <p style="
+    font-size: 14pt;
+    color:black;
+    padding-bottom: 30px;
+    "><i>"As long as there are games to play, it is not over yet!"</i>
+                </p>
+            </div>
+
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-right"></i>
+            </a>
+
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <br>
+        <div class="creative_taital" style="width: 100%;
+        background-color: #ffffff;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        box-shadow: 0px 0px 10px 0px;
+        color: #e7e7e7;
+        margin-bottom: 50px;">
+            <h1 class="creative_text" style="width: 70%;
+                                            color: #050000;
+                                            line-height: 2;
+                                            font-size: 22pt;
+                                            text-align: center;
+                                            border-bottom: 1px solid #000;
+                                            width: 46%;
+                                            margin: 0 auto;
+                                            text-align: center;
+                                            font-weight: bold; ">RUSH HOUR</h1>
+
+            <p style="color: #050000; text-align: center; 
+                                            margin: 20px;
+                                            font-weight: 400;
+                                            font-size: 15px;
+                                            line-height: 24px;">
+                Blogging, a portmanteau of web logging, has been around since the 1990s.
+                We from SPORTS RUSH present RUSH HOUR Blogs which is for the people who
+                love turning to the second last page of the newspaper and articles which are
+                not more than a minute read containing all the details. RUSH HOUR Blogs is by the people
+                who love the sports commmunity and respect their efforts and has a vision
+                to connect the followers to the right blog.
+                RUSH HOUR blogs allows fans of a given sport to share sporting news and opinions on sports-related
+                topics, and could help lead to a career in sports journalism or game analysis.</p>
+
+        </div>
+
+        <br>
+
+        <div>
+            <h1 style="color: #050000;
+            line-height:1.6;
+                                font-size: 22pt;
+                                text-align: center;
+                                border-bottom: 1px solid #000;
+                                width: 22%;
+                                margin: 0 auto;
+                                font-weight: bold;">
+                BLOGS
+            </h1>
+            <br>
+        </div>
+
+
+        <% articles.forEach(article => { %>
+        <div style="border-radius: 20px;" class="card mt-4">
+            <div class="card-body">
+                <h4 class=card-tile><%= article.title %></h4>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= article.createdAt.toLocaleDateString() %>
+                </div>
+                <div class="card-text mb-2">
+                    <%= article.description %>
+                </div>
+
+
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <br>
+
+    <br><br><br>
+
+</body>
+
+</html>

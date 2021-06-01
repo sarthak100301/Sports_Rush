@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Guest Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="running-man-1399282_960_720.png" type="image/png" rel="icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Welcome to <br> RUSH HOUR </h1>
+        <br>
+        <form name="guest">
+
+            <input type="submit" onclick="check(this.form)" value="Continue as Guest">
+
+            <div class="signup_link">
+                Admin? <a href="index.html">Log In</a>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <a href="../index.html" class="btn btn-dark myButton">Home</a>
+
+
+    <script language="javascript">
+        function check(form) {
+            window.open('http://localhost:5000')
+
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- style="float: right;margin-right: 14% ;" -->
