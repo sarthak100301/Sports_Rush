@@ -1,5 +1,7 @@
 # SPORTS RUSH
 
+https://sportsrush.herokuapp.com/ (Server Implementation remaining)
+
 ## INTRO
 The aim of our project is to build a Sports Network Community Website, which will broadly cover the following:
 
